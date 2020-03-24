@@ -38,10 +38,11 @@ const validateCred = (arr) => {
      }
     }
 
-    let value = 0;
-    for (let i =0; i < arrCopy.length; i++) {
-      value += arrCopy[i];
-    }
+
+    let value = arrCopy.reduce((acc, curr) => {
+        return acc + curr;
+    });
+
     
     let finalArr = value + popped
     finalArr = finalArr % 10
