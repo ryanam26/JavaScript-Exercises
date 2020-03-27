@@ -108,10 +108,10 @@ const robot = {
     energyLevel: 100,
     functionality: {
       beep() {
-        console.log('Boop Beep');
+        console.log('Boop Beep Deep');
       },
       fireLaser() {
-        console.log('Pew Ewee');
+        console.log('Pew Dew, Mew');
       },
     }
   };
@@ -119,6 +119,7 @@ const robot = {
   const {functionality} = robot
   
   functionality.beep();
+
 
 
 
