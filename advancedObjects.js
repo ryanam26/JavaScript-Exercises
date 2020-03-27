@@ -91,7 +91,7 @@ const robot = {
       model,
       mobile,
       beep() {
-        console.log('Beep Boop');
+        console.log('Beep Boop Deep Test');
       }
     }
   }
