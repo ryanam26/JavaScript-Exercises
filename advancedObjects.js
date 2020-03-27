@@ -111,7 +111,7 @@ const robot = {
         console.log('Beep Boop');
       },
       fireLaser() {
-        console.log('Pew Pew');
+        console.log('Pew Ewee');
       },
     }
   };
