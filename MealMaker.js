@@ -49,21 +49,22 @@ const menu = {
       const main = this.getRandomDishFromCourse('mains');
       const dessert = this.getRandomDishFromCourse('desserts');
       const totalPrice = appetizer.price + main.price + dessert.price
-      return `Your meal is ${appetizer.name}, ${main.name}, ${dessert.name}.  The total price is ${totalPrice}.`
+      console.log(totalPrice)
+      return `Your meal is ${appetizer.name}, ${main.name}, ${dessert.name}.  The total price is $${totalPrice}.`
     }
   }
   
-    menu.addDishToCourse("appetizers", "wings", "$10.99");
-    menu.addDishToCourse("appetizers", "mushrooms", "$11.99");
-    menu.addDishToCourse("appetizers", "calamari", "$12.99");
+    menu.addDishToCourse("appetizers", "wings", 10.99);
+    menu.addDishToCourse("appetizers", "mushrooms", 11.99);
+    menu.addDishToCourse("appetizers", "calamari", 12.99);
     
-    menu.addDishToCourse("mains", "salad", "$15.99");
-    menu.addDishToCourse("mains", "sandwich", "$13.99");
-    menu.addDishToCourse("mains", "soup and salad", "$17.99");
+    menu.addDishToCourse("mains", "salad", 15.99);
+    menu.addDishToCourse("mains", "sandwich", 13.99);
+    menu.addDishToCourse("mains", "soup and salad", 17.99);
   
-    menu.addDishToCourse("desserts", "tre leches", "$5.99");
-    menu.addDishToCourse("desserts", "cake", "$8.99");
-    menu.addDishToCourse("desserts", "mile and cookies", "$9.99");
+    menu.addDishToCourse("desserts", "tres leches", 5.99);
+    menu.addDishToCourse("desserts", "cake", 8.99);
+    menu.addDishToCourse("desserts", "milk and cookies", 9.99);
   
   const meal = menu.generateRandomMeal()
   
