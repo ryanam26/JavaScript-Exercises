@@ -15,27 +15,38 @@ const team = {
       lastname: "Mane",
       age: 26
     }],
-    _games: [{
+    _games: [
+    {
       opponent: "Man United",
       teamPoints: 2,
       opponentPoints: 1
+    },
+    {
+      opponent: "Chelsea",
+      teamPoints: 3,
+      opponentPoints: 1
+    },
+    {
+      opponent: "Everton",
+      teamPoints: 6,
+      opponentPoints: 2
     }],
-    get firstname() {
-      return this._players.firstName;
+    
+    get players() {
+        return this._players;
     },
-    get lastName() {
-      return this._players.lastName;
+
+    get games() {
+        return this._games;
     },
-    get age() {
-      return this._players.age
-    },
+    
     addPlayer(firstName, lastName, age) {
       const player =  {
         firstName: firstName,
         lastName: lastName,
         age: age
       }
-      return this._players.push(player);
+      this.players.push(player);
     },
     addGame(opp, myPoints, oppPoints) {
       const game =  {
@@ -47,13 +58,19 @@ const team = {
     }
     };
   
-  // console.log(team._games[0].opponentPoints)
   
   team.addPlayer("Steph", "Curry", 25)
-  // team.addPlayer("Lisa", "Leslie", 44)
-  // team.addPlayer("Bugs", "Bunny", 76)
+  team.addPlayer("Lisa", "Leslie", 44)
+  team.addPlayer("Bugs", "Bunny", 76)
+
+  
   
   team.addGame("Man City", 6, 4)
+  team.addGame("Chelsea", 6, 4)
+  team.addGame("Everton", 6, 4)
+
+  console.log(team._games)
+  
   
   
   
