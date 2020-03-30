@@ -54,7 +54,7 @@ const team = {
         teamPoints: myPoints,
         opponentPoints: oppPoints
       }
-      this._games.push(game);
+      this.games.push(game);
     }
     };
   
