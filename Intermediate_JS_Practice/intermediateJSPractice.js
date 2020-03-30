@@ -1,5 +1,5 @@
 // reverse an array without using a built in function, Could use .reverse() method
-const reverseArray = (arr) => {
+const reverseArray = arr => {
   
     let reverseArr = [];
     
@@ -18,10 +18,25 @@ const reverseArray = (arr) => {
   // build function without using .forEach method
   const aliens = ["Blorgous", "Glamyx", "Wegord", "SpaceKing"];
 
-  let greetAliens = (arr) => {
+  const greetAliens = arr => {
     for (let i = 0; i < arr.length; i++) {
       console.log("Oh powerful " + arr[i] + ", we humans offer our unconditional surrender!")
     }
   };
   
   greetAliens(aliens)
+
+
+
+//a function without using .map()
+const convertToBaby = arr => {
+    newArr = []
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push("baby " + arr[i])
+  }
+  return newArr
+};
+
+const animals = ['panda', 'turtle', 'giraffe', 'hippo', 'sloth', 'human'];
+
+console.log(convertToBaby(animals))
