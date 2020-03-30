@@ -13,8 +13,3 @@ const reverseArray = (arr) => {
   const sentence = ['sense.','make', 'all', 'will', 'This'];
   
   console.log(reverseArray(sentence)) 
-
-  
-  
-  
-  
