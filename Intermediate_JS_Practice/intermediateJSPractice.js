@@ -96,7 +96,6 @@ const numbers = [2, 7, 9, 171, 52, 33, 14]
 
 const toSquare = num => num * num
 
-// Write your code here:
 
 let squareNums = arr => {
   return arr.map(newArr => toSquare(newArr));
@@ -108,7 +107,14 @@ console.log(squareNums(numbers))
 
 
 
+// use .map method or for loop
+const greetings = ['hello', 'hi', 'heya', 'oi', 'hey', 'yo'];
+let shoutGreetings = arr => {
+  return arr.map(newArr => newArr.toUpperCase() + "!")
+};
 
+
+console.log(shoutGreetings(greetings))
 
 
 
