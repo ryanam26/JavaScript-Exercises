@@ -63,7 +63,7 @@ const smallestPowerOfTwo = arr => {
 }
 
 console.log(smallestPowerOfTwo(numbers)) 
-// Should print the returned array [ 8, 4, 16, 32 ] instead prints the returned array [8]
+
 
 
 
@@ -74,7 +74,7 @@ const politelyDecline = (veg) => {
       console.log('No ' + veg + ' please. I will have pizza with extra cheese.');
 }
 
-// Write your code here:
+
 
 const declineEverything = arr => {
   arr.forEach(politelyDecline);
@@ -103,6 +103,14 @@ let squareNums = arr => {
 
 console.log(squareNums(numbers))
 
+// use sroted method
+const sortYears = arr => arr.sort((x, y) => y - x);
+
+
+const years = [1970, 1999, 1951, 1982, 1963, 2011, 2018, 1922]
+
+console.log(sortYears(years))
+
 
 
 
@@ -117,5 +125,109 @@ let shoutGreetings = arr => {
 console.log(shoutGreetings(greetings))
 
 
+// use filter and include method
+const justCoolStuff = (firstArray, secondArray) => firstArray.filter(item => secondArray.includes(item))
 
 
+const coolStuff = ['gameboys', 'skateboards', 'backwards hats', 'fruit-by-the-foot', 'pogs', 'my room', 'temporary tattoos'];
+
+const myStuff = [ 'rules', 'fruit-by-the-foot', 'wedgies', 'sweaters', 'skateboards', 'family-night', 'my room', 'braces', 'the information superhighway']; 
+
+console.log(justCoolStuff(myStuff, coolStuff))
+
+
+
+
+//loop through objects
+const dinner = [{name: 'hamburger', source: 'meat'}, {name: 'cheese', source: 'dairy'}, {name: 'ketchup', source:'plant'}, {name: 'bun', source: 'plant'}, {name: 'dessert twinkies', source:'unknown'}];
+
+let isTheDinnerVegan = obj => {
+  for (let i = 0; i < obj.length; i++)
+    if (obj[i].source === "meat" || obj[i].source === "unknown") {
+      return false
+    } else {
+      return true
+    }
+}
+
+console.log(isTheDinnerVegan(dinner));
+
+
+//use .sort function
+const speciesArray = [ {speciesName:'shark', numTeeth:50}, {speciesName:'dog', numTeeth:42}, {speciesName:'alligator', numTeeth:80}, {speciesName:'human', numTeeth:32}];
+
+const sortSpeciesByTeeth = arr => arr.sort((speciesObj1, speciesObj2) => speciesObj1.numTeeth > speciesObj2.numTeeth)
+
+console.log(sortSpeciesByTeeth(speciesArray))
+
+
+// use indexOf function
+let findMyKeys = (arr) => {
+  return arr.indexOf("keys");
+ };
+ 
+ const randomStuff = ['credit card', 'screwdriver', 'receipt', 'gum', 'keys', 'used gum', 'plastic spoon'];
+ 
+ console.log(findMyKeys(randomStuff))
+
+
+   //Factory functions
+const dogFactory = (name, breed, weight) => {
+  return {
+      _name: name,
+      _breed: breed,
+      _weight: weight,
+      get name() {
+          return this._name;
+      },
+      set name(newName) {
+          this._name = newName;
+      },
+      get breed() {
+          return this._breed;
+      },
+      set breed(newBreed) {
+          this._breed = newBreed;
+      },
+      get weight() {
+          return this._weight;
+      },
+      set weight(newWeight) {
+          this._weight = newWeight;
+      },
+      bark() {
+          return 'ruff! ruff!'
+      },
+      eatTooManyTreats() {
+          this._weight++
+      }
+  }
+}
+
+let newDag = dogFactory("Nelson", "chihahau", 10)
+
+console.log(newDag.bark())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
