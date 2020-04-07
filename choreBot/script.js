@@ -7,11 +7,18 @@ let openDoor1
 let openDoor2 
 let openDoor3
 
-const numClosedDoors = 3;
-
 const doorImage1 = document.getElementById("door1");
 const doorImage2 = document.getElementById("door2");
 const doorImage3 = document.getElementById("door3");
+
+const numClosedDoors = 3;
+
+const playDoor = () => {
+        numClosedDoors--;
+    if ( numClosedDoors === 0 ) {
+        gameOver()
+    }
+};
 
 const randomChoreDoorGenerator = () => {
     const choreDoor = Math.floor(Math.random() * numClosedDoors );
@@ -43,5 +50,6 @@ doorImage2.onclick = () => {
 doorImage3.onclick = () => {
     doorImage3.src = openDoor3;
 };
+
 
 randomChoreDoorGenerator()
