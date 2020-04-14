@@ -20,7 +20,7 @@ const reverseArray = arr => {
 
   const greetAliens = arr => {
     for (let i = 0; i < arr.length; i++) {
-      console.log("Oh powerful " + arr[i] + ", we humans offer our unconditional surrender!")
+      console.log("Oh very powerful  " + arr[i] + ", we humans offer our unconditional surrender!")
     }
   };
   
