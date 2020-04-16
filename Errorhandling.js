@@ -22,5 +22,4 @@ try {
     console.log( user.name );
 } catch(e) {
     console.log( "JSON Error: " + e.message);
-    
 }
