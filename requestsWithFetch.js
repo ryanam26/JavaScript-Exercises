@@ -1,0 +1,2 @@
+// Get requests with fetch()
+
